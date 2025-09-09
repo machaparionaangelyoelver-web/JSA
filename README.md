@@ -101,7 +101,7 @@ ya que busca profundizar en temas avanzas relacionados con CSS.
 # CAPITULO 1 - Introducción a JavaScript y su ejecución en navegadores
 
 ## definición
-A diferencia de los lenguajes compilados, **JavaScript se interpreta directamente en el navegador** mediante un motor interno, lo que permite ejecutar instrucciones en tiempo real mientras el usuario navega. Este enfoque posibilita que las páginas reaccionen a eventos del usuario sin necesidad de recargar todo el documento.
+A diferencia de los lenguajes compilados, JavaScript se interpreta directamente en el navegador mediante un motor interno, lo que permite ejecutar instrucciones en tiempo real mientras el usuario navega. Este enfoque posibilita que las páginas reaccionen a eventos del usuario sin necesidad de recargar todo el documento.
 
 ## Motores de JavaScript
 
@@ -110,9 +110,9 @@ Cada navegador cuenta con su propio motor, encargado de interpretar y ejecutar e
 ## Proceso de ejecución
 
 El motor de JavaScript realiza tres etapas principales:
-1. **Parsing:** Análisis del código fuente para convertirlo en un árbol de sintaxis.  
-2. **Compilación Just-In-Time (JIT):** Traducción del código a instrucciones de máquina optimizadas.  
-3. **Ejecución:** Interpretación línea por línea y manipulación del **DOM (Document Object Model)**.
+1. Parsing: Análisis del código fuente para convertirlo en un árbol de sintaxis.  
+2. Compilación Just-In-Time (JIT): Traducción del código a instrucciones de máquina optimizadas.  
+3. Ejecución: Interpretación línea por línea y manipulación del DOM (Document Object Model).
 
 ## Ejemplo de integración en HTML
 
