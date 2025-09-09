@@ -640,141 +640,240 @@ console.log(dividir(10, 2)); // { ok: true, resultado: 5 }
 console.log(dividir(5, 0));  // { ok: false, error: ... }
 
 ```
-# CAPÍTULO 7 - Clipping y Masking con CSS
+# CAPÍTULO 7 - Manipulación del DOM
 
 ## Concepto
 
-Dentro de las técnicas avanzadas de diseño web, el **Clipping** y el **Masking** en CSS representan recursos fundamentales para la manipulación visual de los elementos. Ambas técnicas tienen como finalidad alterar las áreas visibles de un elemento, aunque lo hacen mediante mecanismos distintos:
+El **DOM (Document Object Model)** es una interfaz de programación que representa el documento HTML como un árbol de nodos. 
+Cada etiqueta (`<div>`, `<p>`, `<h1>`, etc.) se convierte en un nodo que puede ser manipulado con JavaScript. Es por eso que podemos:
 
-- **Clipping**: se basa en la utilización de la propiedad `clip-path`, la cual permite definir una región geométrica (círculos, elipses, polígonos, entre otros) que delimita la parte del elemento que será visible. El contenido fuera de la forma definida se oculta sin modificar realmente el DOM.  
-- **Masking**: emplea una imagen o un gradiente como máscara mediante la propiedad `mask-image` (o `-webkit-mask-image` en algunos navegadores). La máscara determina qué partes del elemento serán visibles en función de la opacidad o transparencia de la imagen aplicada.  
+- Seleccionar elementos de la página.
 
-Según Coyier (2021), estas herramientas amplían considerablemente la creatividad del diseñador, dado que permiten crear interfaces más dinámicas, con efectos visuales modernos sin necesidad de editar previamente las imágenes en un software externo.
+- Modificar su contenido o estilo.
 
-## Ventajas
+- Responder a eventos del usuario como clics, movimientos del mouse o teclas presionadas.
 
-- **Mayor expresividad visual**: posibilitan el uso de formas y patrones personalizados que enriquecen el diseño de interfaces.  
-- **Flexibilidad**: mientras el clipping se orienta a recortes geométricos, el masking admite imágenes complejas y gradientes.  
-- **Optimización de recursos**: evita la necesidad de generar imágenes editadas previamente, ya que los efectos se logran directamente con código.  
-- **Compatibilidad moderna**: ampliamente soportado en navegadores actuales, aunque en algunos casos se requiere prefijos específicos.  
-- **Aplicaciones dinámicas**: se pueden integrar con transiciones y animaciones para efectos interactivos en páginas web.  
+-----------------
 
-## Ejemplo de código
+### Ejemplo de DOM:
 
-```css
-/* CSS */
-.clipped {
-  width: 300px;
-  height: 300px;
-  background: url('https://picsum.photos/400') no-repeat center/cover;
-  clip-path: circle(50% at 50% 50%);
-}
+Es un método en JavaScript es fundamental para la gestión de eventos en el desarrollo web, que permite asociar una función para que se ejecute cada vez que se entrega un evento específico a un elemento de destino en el DOM.
 
-.masked {
-  width: 300px;
-  height: 300px;
-  background: url('https://picsum.photos/400') no-repeat center/cover;
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: cover;
-}
-```
+**Código HTML:**
+
+Este código es un ejemplo práctico del uso del DOM (Document Object Model). El objetivo es mostrar cómo una página web puede volverse interactiva al modificar elementos HTML.
 
 ```html
-<!-- HTML -->
-<div class="clipped"></div>
-<br>
-<div class="masked"></div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo Completo DOM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #titulo {
+      color: darkblue;
+    }
+    #parrafo {
+      font-size: 18px;
+      color: gray;
+    }
+    button {
+      margin: 10px;
+      padding: 8px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo">Bienvenido al DOM ✨</h1>
+  <p id="parrafo">Este texto puede cambiar con JavaScript.</p>
+
+  <button id="btnTexto">Cambiar Texto</button>
+  <button id="btnColor">Cambiar Color</button>
+  <button id="btnOcultar">Ocultar/Mostrar Párrafo</button>
+
+  <!-- Conexión al script -->
+  <script src="script.js"></script>
+</body>
+</html>
 ```
 
-## Resultado
+**Código JAVASCRIPT:** 
 
-El primer ejemplo aplica un recorte circular a la imagen de fondo del elemento, mostrándola como si estuviera contenida en un círculo perfecto. El segundo ejemplo utiliza un degradado como máscara, de modo que la parte inferior de la imagen se desvanece progresivamente hasta volverse transparente.
+Este código usa JavaScript y el DOM,  con tres botones se puede cambiar el texto de un párrafo, alternar el color del título y ocultar o mostrar el párrafo, todo mediante eventos click.
 
-# CAPITULO 8 - Propiedades y Contenedores CSS (Container Queries)
-Los CSS Container Queries son el mismo concepto de las Media Queries, pero en lugar de estar orientados a modificar los estilos dependiendo del tamaño de la página o dispositivo (viewport), lo hace dependiendo de un contenedor padre (o ancestro). De esta forma, podemos cambiar el tamaño de ciertos elementos y hacer que tengan una forma o unos estilos dependiendo del contexto donde se encuentren.
+```javascript
+// 1. Seleccionar elementos
+const titulo = document.getElementById("titulo");
+const parrafo = document.querySelector("#parrafo"); // otra forma de seleccionar
+const btnTexto = document.getElementById("btnTexto");
+const btnColor = document.getElementById("btnColor");
+const btnOcultar = document.getElementById("btnOcultar");
+
+// 2. Modificar contenido y estilos con eventos
+btnTexto.addEventListener("click", () => {
+  parrafo.textContent = "¡El contenido ha cambiado con el DOM! 🎉";
+});
+
+btnColor.addEventListener("click", () => {
+  titulo.style.color = titulo.style.color === "darkblue" ? "crimson" : "darkblue";
+});
+
+btnOcultar.addEventListener("click", () => {
+  if (parrafo.style.display === "none") {
+    parrafo.style.display = "block";
+  } else {
+    parrafo.style.display = "none";
+  }
+});
+```
+
+## Resultado:
+
+El usuario puede modificar dinámicamente el texto, color y visibilidad de los elementos de la página con solo hacer clic en los botones.
+
+# CAPITULO 8 - Eventos y Manejadores (addEventListener, onclick)
+
+## Concepto
+
+En JavaScript, un **evento** es una acción que ocurre en la página (clic, movimiento del mouse, teclado, scroll, etc.).  
+Un **manejador de eventos** es la función que se ejecuta cuando ocurre esa acción.
 
 ------------
 
-### ELEMENTO CONTENEDOR
-Para empezar tenemos que determinar cuál será el elemento contenedor al que vamos a hacer referencia. En dicho elemento, necesitaremos establecer las siguientes propiedades:
+### EVENTOS (addEventListener):
 
-#### PROPIEDADES
+Es un método en JavaScript es fundamental para la gestión de eventos en el desarrollo web, que permite asociar una función para que se ejecute cada vez que se entrega un evento específico a un elemento de destino en el DOM.
 
-**Propiedad container-name:** La propiedad container-name le da un nombre de contenedor al elemento en el que nos encontramos. Sin este nombre no podremos hacer referencia luego, en la regla @container.
+**Código HTML:**
 
-**ejemplo:**
+Este código crea una página con un botón y un párrafo. Cuando presionas el botón, gracias al addEventListener en el archivo a **add.js**, el texto del párrafo cambia dinámicamente.
 
-```css
-.container {
-  container-name: titulo;
-}
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo addEventListener</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        #btn:hover {
+            background-color: #45a049;
+        }
+        #texto {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ejemplo con <code>addEventListener</code></h2>
+    <button id="btn">Haz clic aquí</button>
+    <p id="texto">Aquí aparecerá el mensaje...</p>
+
+    <script src="add.js"></script>
+</body>
+</html>
 ```
 
-**Propiedad container-type:** La propiedad container-type, establece el tipo de tamaño que va a tener el contenedor en cuestión, donde puede ser:
- - size: Elementos de tipo bloque (alto y ancho).
- -  inline-size: Elementos de tipo linea (solo ancho).
+**Código JAVASCRIPT:** 
+
+Usa addEventListener para escuchar tres tipos de eventos en el botón:
+
+- click → cambia texto a azul y en negrita.
+- mouseover → muestra mensaje en color naranja.
+- mouseout → muestra mensaje en color rojo.
  
-**ejemplo**
-```css
- .container {
-  container-name: titulo;
-  container-type: inline-size;
-}
-```
-**Propiedad container:** En esta propiedad podemos indicar **dos valores**, el valor de la propiedad **container-name** y el valor de la propiedad **container-type**, pero siempre separadas por un **/**.
 
-**ejemplo**
+```javascript
+const boton = document.getElementById("btn");
+const texto = document.getElementById("texto");
 
-```css
- .container {
-  container: titulo / inline-size;
-}
+// Evento para cambiar el texto
+boton.addEventListener("click", () => {
+    texto.textContent = "¡Genial! Usaste addEventListener";
+    texto.style.color = "blue"; // cambia color
+    texto.style.fontWeight = "bold"; // lo pone en negrita
+});
+
+// Otro evento: Cuando se pasa el mouse por encima
+boton.addEventListener("mouseover", () => {
+    texto.textContent = "Estás pasando el mouse por el botón";
+    texto.style.color = "orange";
+});
+
+// Otro evento: Cuando se quita el mouse
+boton.addEventListener("mouseout", () => {
+    texto.textContent = "Quitaste el mouse del botón";
+    texto.style.color = "red";
+});
 ```
 ------------
-### REGLA CONTAINER
-Una vez tenemos nuestro contenedor definido, debemos establecer una regla @container que es muy parecido a las reglas @media, pero en este caso establece una condición para aplicar estilos a un contenedor en concreto.
 
-**SINTAXIS**
-```css
-@container <nombre del contenedor> (<condición>)
+### Manejadores (onclick):
+
+Es un atributo de eventos en JavaScript que permite ejecutar una función cuando un usuario hace clic en un elemento HTML, como un botón.
+
+**Código HTML:**
+
+Aquí se usa el atributo HTML **onclick** directamente en el botón.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo ONCLICK</title>
+</head>
+<body>
+    <h1>Ejemplo con ONCLICK</h1>
+
+    <button onclick="mostrarMensaje()">Click aquí</button>
+    <p id="texto">Aquí aparecerá el mensaje...</p>
+
+    <script src="on.js"></script>
+</body>
+</html>
 ```
-**Ejemplo**
-```css
-.container {
-  border: 1px solid red;
-  color: black;
-  container: titulo;
-}
 
-@container logo (width <= 550px) {
-  .h1 {
-    color: blue;
-  }
+**Código JAVASCRIPT:**
+
+Se utiliza onclick:
+
+- El botón tiene onclick = "mostrarMensaje()".
+- Cuando haces clic, se ejecuta la función mostrarMensaje().
+- La función busca el párrafo con id texto y cambia su contenido.
+ 
+
+```javascript
+function mostrarMensaje() {
+    document.getElementById("texto").textContent = "Hiciste click con ONCLICK";
 }
 ```
 
 ------------
 
-### UNIDADES DE CONTENEDORES
-Cuando nos encontramos en el interior de una regla @container podemos utilizar ciertas unidades especiales como cqw, cqh, cqi, cqb, cqmin o cqmax.
-Los componentes que usan unidades de longitud relativas a su contenedor son más flexibles para su uso en diferentes contenedores sin tener que recalcular valores de longitud concretos.
-
-**Las unidades de longitud de la consulta del contenedor son:**
-- cqw: 1% del ancho de un contenedor de consulta
-- cqh: 1% de la altura de un contenedor de consulta
-- cqi: 1% del tamaño en línea de un contenedor de consulta
-- cqb: 1% del tamaño del bloque de un contenedor de consulta
-- cqmin: El valor más pequeño de uno cqi o cqb
-- cqmax: El valor mayor de uno cqi u otro cqb
-
-```css
-@container (width > 700px) {
-  .card h2 {
-    font-size: max(1.5em, 1.23em + 2cqi);
-  }
-}
-```
 # CAPITULO 9 - JSON y almacenamiento local (localStorage, sessionStorage)
 ## Json(JavaScript Object Notation) 
 
