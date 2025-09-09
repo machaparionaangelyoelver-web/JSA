@@ -239,11 +239,11 @@ Se utilizan para realizar operaciones matemáticas.
 ## 2. Operadores Lógicos
 Se usan para combinar condiciones y devuelven un valor booleano (`true` o `false`).
 
-| Operador | Descripción                                              | Ejemplo                | Resultado |
-|:--------:|----------------------------------------------------------|------------------------|:---------:|
-| `&&`     | **AND**: verdadero si ambas condiciones son verdaderas   | `(5 > 3) && (8 > 6)`   | true      |
-|  ||      | **OR**: verdadero si al menos una condición es verdadera | `(5 > 3) \|\| (8 < 6)` | true      |
-| `!`      | **NOT**: invierte el valor lógico                        | `!(5 > 3)`             | false     |
+| Operador | Descripción                                          | Ejemplo                | Resultado |
+|:--------:|------------------------------------------------------|------------------------|:---------:|
+| `&&`     | AND: verdadero si ambas condiciones son verdaderas   | `(5 > 3) && (8 > 6)`   | true      |
+|  ||      | OR: verdadero si al menos una condición es verdadera | `(5 > 3) \|\| (8 < 6)` | true      |
+| `!`      | NOT: invierte el valor lógico                        | `!(5 > 3)`             | false     |
 
 ---
 
