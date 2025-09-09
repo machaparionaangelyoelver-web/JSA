@@ -135,65 +135,83 @@ El motor de JavaScript realiza tres etapas principales:
 </html>
 ```
 
-# CAPITULO 2 - Funciones CSS (calc(), clamp(), min(), max())
+# CAPITULO 2 - Variables y tipos de datos en JavaScript
 
-Las funciones en CSS forman parte de las herramientas modernas que permiten definir valores dinámicos sin necesidad de JavaScript. Su propósito es calcular y ajustar automáticamente propiedades de diseño, lo que hace que las páginas sean más flexibles y responsivas (MDN Web Docs, s. f.).
+Las variables son espacios de memoria destinados a almacenar datos que serán utilizados en la ejecución del programa. En JavaScript pueden declararse de tres maneras:
+var estudiante = true;   // Boolean
 
-Estas funciones se interpretan directamente en el navegador y pueden trabajar con unidades mixtas (px, %, vw, rem, etc.), lo que antes requería cálculos manuales o media queries adicionales. Entre las más usadas tenemos:
-
-calc(): permite realizar operaciones matemáticas (+, −, ×, ÷).
-
-min(): selecciona el valor más pequeño entre dos o más opciones.
-
-max(): selecciona el valor más grande entre dos o más opciones.
-
-clamp(): fija un rango mínimo, preferido y máximo en una sola línea.
-
-Estas funciones, combinadas con variables CSS, dan mayor control y eficiencia en proyectos grandes de diseño web.
-
-## 🔹 Ventajas
-
-Adaptabilidad: ajustan medidas de forma automática según el tamaño del dispositivo.
-
-Simplicidad: reducen la necesidad de usar JavaScript o varias media queries.
-
-Flexibilidad: permiten mezclar diferentes unidades (ejemplo: px con %).
-
-Mantenimiento fácil: facilitan cambios en proyectos grandes y responsivos.
-
-🔹 Ejemplos de código
-
-Ejemplo con calc()
-```css
-div {
-  width: calc(100% - 50px);
-}
 ```
-➡ El div ocupará todo el ancho de la página menos 50 píxeles.
 
-Ejemplo con min()
-```css
-div {
-  width: min(70%, 400px);
-}
-```
-➡ El ancho será el menor valor: 70% de la pantalla o 400px.
+## Tipos de datos primitivos:
 
-Ejemplo con max()
-```css
-p {
-  font-size: max(16px, 2vw);
-}
-```
-➡ El texto nunca será más pequeño que 16px, pero crecerá en pantallas grandes.
+## String (cadenas de texto):
 
-Ejemplo con clamp()
-```css
-h1 {
-  font-size: clamp(16px, 5vw, 40px);
-}
+```javascript
+let saludo = "Hola Mundo";
+
 ```
-➡ El título (h1) será como mínimo 16px, crecerá de forma dinámica (5vw), pero nunca más de 40px.
+
+## Number (números enteros y decimales):
+
+```javascript
+let pi = 3.1416;
+```
+
+## Boolean (verdadero/falso):
+
+```javascript
+let activo = false;
+
+```
+
+## Undefined (sin valor asignado):
+
+```javascript
+let x;
+console.log(x); // undefined
+
+```
+
+## Null (ausencia de valor):
+
+```javascript
+let y = null;
+```
+
+## Symbol (identificadores únicos):
+
+```javascript
+let id = Symbol("clave");
+```
+
+## BigInt (números enteros muy grandes):
+
+```javascript
+let big = 9007199254740991n;
+
+```
+
+## Tipos de datos estructurados (objetos):
+
+Array: Colecciones ordenadas.
+
+```javascript
+let colores = ["rojo", "verde", "azul"];
+
+```
+
+Object: Estructuras clave-valor.
+
+```javascript
+let persona = {
+  nombre: "Carlos",
+  edad: 30,
+  estudiante: true
+};
+
+```
+
+El dominio correcto de variables y tipos de datos permite organizar, procesar y manipular información de manera eficiente, constituyendo la base de todo desarrollo en JavaScript.
 
 # CAPITULO 3 - Grid Layout Avanzado (Áreas de grid, auto-fit, auto-fill)
 
