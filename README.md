@@ -39,19 +39,19 @@
 
 [INTRODUCCIÓN]
 
-[CAPITULO 1 - Variables CSS y Custom Properties]
+[CAPITULO 1 - Introducción a JavaScript y su ejecución en navegadores]
 
-[CAPITULO 2 - Funciones CSS (calc(), clamp(), min(), max())]
+[CAPITULO 2 - Variables y tipos de datos (String, Number, Boolean, Arrays, Objects)]
 
-[CAPITULO 3 - Grid Layout Avanzado (Áreas de grid, auto-fit, auto-fill)]
+[CAPITULO 3 - Operadores (aritméticos, lógicos, comparación)]
 
-[CAPITULO 4 - Flexbox avanzado (Alineaciones, distribución dinámica)]
+[CAPITULO 4 - Condicionales (if, else, switch)]
 
-[CAPITULO 5 - Diseño responsivo (Media Queries y Mobile-first)]
+[CAPITULO 5 - Bucles (for, while, do while) ]
 
-[CAPITULO 6 - Scroll Snap y Técnicas de Scroll]
+[CAPITULO 6 - Funciones (declaración, expresiones, parámetros, retorno)]
 
-[CAPITULO 7 - Clipping y Masking con CSS]
+[CAPITULO 7 - Manipulación del DOM (seleccionar elementos, modificar contenido, eventos)]
 
 [CAPITULO 8 - Eventos y manejadores (addEventListener, onclick, etc.)]
 
