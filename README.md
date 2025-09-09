@@ -10,7 +10,7 @@
 </h2>
 
 <h2 align="center">
-     Conocimientos avanzados del lenguaje de diseño CSS
+     JavaScript Básico
 </h2>
 
 **PRESENTADO POR:**
