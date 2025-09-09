@@ -53,7 +53,7 @@
 
 [CAPITULO 7 - Clipping y Masking con CSS]
 
-[CAPITULO 8]
+[CAPITULO 8 - Eventos y manejadores (addEventListener, onclick, etc.)]
 
 [CAPITULO 9]
 
