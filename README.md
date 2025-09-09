@@ -272,88 +272,144 @@ Comparan valores y devuelven `true` o `false`.
 
 
 
-# CAPÍTULO 4 – Flexbox avanzado (Alineaciones, distribución dinámica)
+# CAPÍTULO 4 – Teoría de Condicionales en JavaScript
 
-Flexbox, o **Flexible Box Layout**, es un sistema de diseño unidimensional en CSS que permite organizar elementos en filas o columnas de forma más flexible y eficiente que los métodos tradicionales como `float` o `inline-block` (MDN Web Docs, s. f.).
 
-En su nivel avanzado, Flexbox ofrece herramientas poderosas para la **alineación, distribución dinámica y adaptabilidad**, permitiendo que los elementos se acomoden automáticamente al espacio disponible.
-
----
-
-## 🔹 Propiedades avanzadas más relevantes
-
-- **justify-content**: controla la alineación horizontal dentro del contenedor.  
-  Valores útiles: `space-between`, `space-around`, `space-evenly`, `center`, `flex-start`, `flex-end`.
-
-- **align-items**: define la alineación vertical de los elementos.  
-  Valores: `stretch`, `center`, `flex-start`, `flex-end`.
-
-- **align-content**: controla el espacio entre filas cuando hay múltiples líneas (wrap).  
-  Ejemplo: `align-content: space-between;`.
-
-- **flex-grow / flex-shrink / flex-basis**: permiten distribuir espacio dinámicamente.  
-  - `flex-grow`: qué tanto crece un ítem.  
-  - `flex-shrink`: qué tanto se reduce un ítem.  
-  - `flex-basis`: tamaño base inicial.  
-
-- **order**: cambia el orden visual de los elementos sin alterar el HTML.
+Los **condicionales** en JavaScript permiten ejecutar diferentes bloques de código dependiendo de si una condición es verdadera o falsa.  
+Son fundamentales para el control del flujo de un programa.
 
 ---
 
-## 🔹 Ejemplo de alineaciones dinámicas
-```css
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 200px;
-  background: lightgray;
-}
+## 1. Estructura `if`
+El condicional `if` ejecuta un bloque de código solo si la condición es **verdadera** (`true`).  
+Si la condición es **falsa** (`false`), el bloque se omite.
 
-.item {
-  width: 80px;
-  height: 80px;
-  background: steelblue;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-````
-
-➡ En este ejemplo, los elementos se distribuyen con **espacio alrededor** y quedan **centrados verticalmente** en el contenedor.
-
-## 🔹 Ejemplo de distribución dinámica
-
-```css
-.container {
-  display: flex;
-  gap: 10px;
-}
-
-.item {
-  flex-grow: 1;
-  background: lightseagreen;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
+**Sintaxis:**
+```javascript
+if (condicion) {
+    // Código que se ejecuta si la condición es verdadera
 }
 ```
 
-➡ Aquí, todos los ítems ocupan el **mismo ancho disponible**, adaptándose de manera **automática y proporcional** al espacio de la pantalla.
+**Ejemplo:**
+```javascript
+let edad = 18;
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
+}
+```
 
 ---
 
-## ✅ Ventajas del uso avanzado de Flexbox
+## 2. Estructura `if...else`
+Permite ejecutar un bloque si la condición es verdadera y otro si es falsa.
 
-* Permite **alineaciones complejas** sin necesidad de hacks con `float`.
-* Facilita el **diseño adaptable** en diferentes resoluciones.
-* Mejora la **legibilidad y mantenimiento** del código.
-* Junto con **Media Queries**, es clave en el diseño web moderno y responsivo.
+**Sintaxis:**
+```javascript
+if (condicion) {
+    // Código si la condición es verdadera
+} else {
+    // Código si la condición es falsa
+}
+```
+
+**Ejemplo:**
+```javascript
+let edad = 16;
+if (edad >= 18) {
+    console.log("Eres mayor de edad");
+} else {
+    console.log("Eres menor de edad");
+}
+```
 
 ---
+
+## 3. Estructura `if...else if...else`
+Se utiliza para evaluar múltiples condiciones en orden.  
+El primer bloque cuya condición sea verdadera será ejecutado y los demás serán ignorados.
+
+**Sintaxis:**
+```javascript
+if (condicion1) {
+    // Código si condicion1 es verdadera
+} else if (condicion2) {
+    // Código si condicion2 es verdadera
+} else {
+    // Código si ninguna condición anterior es verdadera
+}
+```
+
+**Ejemplo:**
+```javascript
+let nota = 15;
+if (nota >= 18) {
+    console.log("Excelente");
+} else if (nota >= 14) {
+    console.log("Aprobado");
+} else {
+    console.log("Reprobado");
+}
+```
+
+---
+
+## 4. Estructura `switch`
+El condicional `switch` evalúa una expresión y la compara contra múltiples **casos**.  
+Si encuentra coincidencia, ejecuta el código correspondiente a ese caso.
+
+**Sintaxis:**
+```javascript
+switch (expresion) {
+    case valor1:
+        // Código si expresion === valor1
+        break;
+    case valor2:
+        // Código si expresion === valor2
+        break;
+    default:
+        // Código si no coincide con ningún caso
+}
+```
+
+**Ejemplo:**
+```javascript
+let dia = 3;
+switch (dia) {
+    case 1:
+        console.log("Lunes");
+        break;
+    case 2:
+        console.log("Martes");
+        break;
+    case 3:
+        console.log("Miércoles");
+        break;
+    default:
+        console.log("Día no válido");
+}
+```
+
+---
+
+## Comparación y recomendaciones
+
+- **`if`**: Úsalo cuando solo necesites evaluar una condición.
+- **`if...else`**: Úsalo cuando haya dos posibles caminos de ejecución.
+- **`if...else if...else`**: Úsalo para evaluar varias condiciones secuencialmente.
+- **`switch`**: Úsalo cuando una sola variable o expresión deba ser comparada contra varios valores posibles.
+- Evita escribir condicionales excesivamente anidados, ya que afectan la legibilidad.
+- En `switch`, recuerda incluir `break` en cada caso para evitar la **caída de casos** (*fall-through*).
+- Usa comparaciones estrictas (`===`) en vez de las débiles (`==`) para evitar errores de tipo.
+
+---
+
+## Ejemplo combinado
+```javascript
+let opcion = "B";
+
+
+```
 
 # CAPÍTULO 5 – Diseño responsivo (Media Queries y Mobile-first)
 
