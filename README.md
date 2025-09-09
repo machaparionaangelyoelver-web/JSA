@@ -1,4 +1,4 @@
-<h1 align="center">UNIVERSIDAD NAIONAL DEL CENTRO DEL PERÚ</h1>
+<h1 align="center">UNIVERSIDAD NACIONAL DEL CENTRO DEL PERÚ</h1>
 
 <div align="center">   
     <img width="400" height="350" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Escudo_UNCP.png" />
