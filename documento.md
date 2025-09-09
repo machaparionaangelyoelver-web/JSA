@@ -10,6 +10,7 @@ JavaScript es un lenguaje de programación esencial en el desarrollo web moderno
 Su capacidad para ejecutarse directamente en navegadores permite la creación de páginas dinámicas e interactivas que transforman la experiencia del usuario.
 
 JavaScript nació en 1995 por iniciativa de Brendan Eich en Netscape, con el objetivo de proporcionar interactividad a las páginas web estáticas. Actualmente, se ha convertido en el **lenguaje universal de la web**, presente en todos los navegadores y normalizado por la especificación **ECMAScript (ECMA-262)**.
+
 ![Image](https://github.com/user-attachments/assets/741004b5-1dd6-4efe-affe-46af1d2c7ee8)
 <img width="1591" height="81" alt="image" src="https://github.com/user-attachments/assets/b33f802f-e0e8-489a-9f9e-8c36416a69f8" />
 
