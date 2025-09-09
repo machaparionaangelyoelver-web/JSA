@@ -779,8 +779,10 @@ Los componentes que usan unidades de longitud relativas a su contenedor son más
 ## Json(JavaScript Object Notation) 
 
 JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos basado en pares clave-valor. Es sencillo de leer por humanos y fácil de interpretar por máquinas. En JavaScript se utiliza ampliamente para almacenar y transferir información. Sus métodos principales son:
-•	JSON.stringify(): convierte un objeto en una cadena JSON.
-•	JSON.parse(): convierte una cadena JSON en un objeto de JavaScript.
+-	JSON.stringify(): convierte un objeto en una cadena JSON.
+-	JSON.parse(): convierte una cadena JSON en un objeto de JavaScript.
+## Relación cliente y servidor
+<img src="Json.jpeg" alt="Json" width="400"/>
 
 ### Código Html
 1) Aquí se arma la estructura básica. En los estilos se define la letra, el espacio entre elementos y se pone un fondo gris con bordes redondeados al bloque
@@ -929,6 +931,13 @@ document.getElementById("guardarColor").addEventListener("click", function(){
     "Tu color favorito en esta sesión es: " + color;
 });
 ```
+### Diagrama de flujo LocalStorage
+
+<img src="LocalStorage.jpeg" alt="LocalStorage" width="800"/>
+
+### Diagrama de flujo SessionStorage
+<img src="SessionStorage.jpeg" alt="SessionStorage" width="800"/>
+
 # CAPITULO 10 - Depuración y uso de la consola (console.log, debugger)
 ## Depuración 
 La depuración es el proceso de identificar y corregir errores en el código. En JavaScript, se puede utilizar la palabra clave debugger, la cual detiene la ejecución del programa y permite inspeccionar el estado de las variables y el flujo del código.
