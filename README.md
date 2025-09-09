@@ -15,17 +15,15 @@
 
 **PRESENTADO POR:**
 
-◼️Cerrón Pizarro Sebastián José
+◼️Aranda Gomez Zarella Andrea
 
-◼️Huaire Maravi Edison Orlando
+◼️Huaman Rojas Jhordan Armando
 
-◼️Huaman Huaynatez Jean Franco
+◼️Macha Pariona Angel Yoelver
 
-◼️Janampa Choccelahua Gian Alessandro
+◼️Mallqui Meza Jhamir Edu
 
-◼️Mateo Cabello Raúl Julián
-
-◼️Ramirez Buitrón Kenyo Wilder
+◼️Quispe Ortiz Jhosep 
 
 <h2 align="center">
     <p>HUANCAYO -- PERÚ</p>
