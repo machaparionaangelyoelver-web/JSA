@@ -92,19 +92,37 @@ El motor de JavaScript realiza tres etapas principales:
 ## Ejemplo de integración en HTML
 
 ```html
-``​`html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Ejemplo JavaScript</title>
+  <title>Ejemplo JavaScript con variables</title>
 </head>
 <body>
   <h1>Bienvenido</h1>
+  <!-- Aquí pondremos el texto generado con JS -->
   <p id="mensaje"></p>
+  
+  <!-- Aquí pondremos el resultado de la suma -->
+  <p id="resultado"></p>
 
   <script>
-    document.getElementById("mensaje").innerText = "Este texto fue generado con JavaScript";
+    // Variable tipo texto (string)
+    let saludo = "Este texto fue generado con JavaScript";
+
+    // Variables numéricas
+    let numero1 = 7;
+    let numero2 = 5;
+
+    // Operación de suma
+    let suma = numero1 + numero2;
+
+    // Mostrar saludo en el párrafo con id="mensaje"
+    document.getElementById("mensaje").innerText = saludo;
+
+    // Mostrar resultado en el párrafo con id="resultado"
+    document.getElementById("resultado").innerText = 
+      "La suma de " + numero1 + " + " + numero2 + " es = " + suma;
   </script>
 </body>
 </html>
