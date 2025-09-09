@@ -213,77 +213,64 @@ let persona = {
 
 El dominio correcto de variables y tipos de datos permite organizar, procesar y manipular información de manera eficiente, constituyendo la base de todo desarrollo en JavaScript.
 
-# CAPITULO 3 - Grid Layout Avanzado (Áreas de grid, auto-fit, auto-fill)
+# CAPITULO 3 - Teoría de Operadores en JavaScript
 
-El CSS Grid Layout es un sistema de diseño en dos dimensiones (filas y columnas) que facilita la construcción de interfaces web organizadas y responsivas. A diferencia de Flexbox, que trabaja en una sola dirección (fila o columna), Grid permite controlar simultáneamente ambas dimensiones, ofreciendo mayor precisión y flexibilidad (W3C, s. f.).
+En JavaScript, los **operadores** permiten realizar operaciones sobre valores y variables. 
+A continuación se describen los principales tipos de operadores: aritméticos, lógicos y de comparación.
 
-Dentro de sus características avanzadas destacan:
+---
 
-grid-template-areas: permite asignar nombres a secciones del layout, lo que mejora la legibilidad y semántica del código.
+## 1. Operadores Aritméticos
+Se utilizan para realizar operaciones matemáticas.
 
-auto-fit y auto-fill: permiten crear cuadrículas dinámicas donde los elementos se ajustan automáticamente al espacio disponible, sin necesidad de usar múltiples media queries.
+| Operador | Descripción     | Ejemplo         | Resultado |
+|:--------:|-----------------|-----------------|:---------:|
+|   `+`    | Suma            | `5 + 3`         | 8         |
+|   `-`    | Resta           | `5 - 3`         | 2         |
+|   `*`    | Multiplicación  | `5 * 3`         | 15        |
+|   `/`    | División        | `6 / 2`         | 3         |
+|   `%`    | Módulo (resto)  | `5 % 2`         | 1         |
+|   `**`   | Potencia        | `2 ** 3`        | 8         |
+|   `++`   | Incremento      | `x = 5; x++`    | 6         |
+|   `--`   | Decremento      | `x = 5; x--`    | 4         |
 
-Estas propiedades hacen de Grid una herramienta fundamental en proyectos modernos de diseño web, especialmente en páginas con estructuras complejas como dashboards, plantillas de noticias, portfolios o aplicaciones web.
+---
 
-🔹 Ventajas
+## 2. Operadores Lógicos
+Se usan para combinar condiciones y devuelven un valor booleano (`true` o `false`).
 
-Organización clara: usar nombres en las áreas facilita la lectura y mantenimiento.
+| Operador | Descripción                                              | Ejemplo                | Resultado |
+|:--------:|----------------------------------------------------------|------------------------|:---------:|
+| `&&`     | **AND**: verdadero si ambas condiciones son verdaderas   | `(5 > 3) && (8 > 6)`   | true      |
+| `||`     | **OR**: verdadero si al menos una condición es verdadera | `(5 > 3) \|\| (8 < 6)` | true      |
+| `!`      | **NOT**: invierte el valor lógico                        | `!(5 > 3)`             | false     |
 
-Diseño responsivo: auto-fit y auto-fill ajustan automáticamente el número de columnas.
+---
 
-Mayor control: permite distribuir espacio, alineaciones y relaciones entre elementos de forma precisa.
+## 3. Operadores de Comparación
+Comparan valores y devuelven `true` o `false`.
 
-Escalabilidad: útil para proyectos grandes donde la estructura puede crecer fácilmente.
+| Operador | Descripción                                  | Ejemplo      | Resultado |
+|:--------:|----------------------------------------------|--------------|:---------:|
+| `==`     | Igual en valor (comparación débil)           | `5 == "5"`   | true      |
+| `===`    | Igual en valor y tipo (comparación estricta) | `5 === "5"`  | false     |
+| `!=`     | Diferente en valor                           | `5 != 3`     | true      |
+| `!==`    | Diferente en valor o tipo                    | `5 !== "5"`  | true      |
+| `>`      | Mayor que                                    | `7 > 5`      | true      |
+| `<`      | Menor que                                    | `3 < 5`      | true      |
+| `>=`     | Mayor o igual                                | `5 >= 5`     | true      |
+| `<=`     | Menor o igual                                | `4 <= 5`     | true      |
 
-🔹 Ejemplos de código
-1. Uso de grid-template-areas
+---
 
-Permite asignar nombres a diferentes secciones del layout.
+## Nota sobre `==` y `===`
+- `==` compara solo el valor, haciendo conversión de tipo si es necesario.
+- `===` compara valor y tipo de dato sin conversión.
+- Se recomienda usar `===` para evitar resultados inesperados.
 
-```css
-.container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar main"
-    "footer footer";
-  grid-template-columns: 1fr 2fr;
-  gap: 10px;
-}
+---
 
-.header  { grid-area: header;  background: lightblue; }
-.sidebar { grid-area: sidebar; background: lightgreen; }
-.main    { grid-area: main;    background: lightcoral; }
-.footer  { grid-area: footer;  background: lightgray; }
 
-```
-➡ Resultado: el diseño queda dividido en header, sidebar, main y footer de forma clara y ordenada.
-
-2. Uso de auto-fit y auto-fill
-
-Sirven para crear grids responsivos que se adaptan automáticamente.
-```css
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 15px;
-}
-.item {
-  background: lightseagreen;
-  height: 100px;
-  border-radius: 8px;
-  text-align: center;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-}
-
-```
-➡ Resultado: las tarjetas se ajustan solas al espacio disponible, evitando el uso de múltiples media queries.
-
-En pantallas grandes → varias columnas.
-
-En pantallas pequeñas → se reducen a 1 o 2 columnas automáticamente.
 
 # CAPÍTULO 4 – Flexbox avanzado (Alineaciones, distribución dinámica)
 
