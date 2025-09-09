@@ -55,9 +55,9 @@
 
 [CAPITULO 8 - Eventos y manejadores (addEventListener, onclick, etc.)]
 
-[CAPITULO 9]
+[CAPITULO 9 - JSON y almacenamiento local (localStorage, sessionStorage)]
 
-[CAPITULO 10 - Técnicas de Performance y Optmización en CSS]
+[CAPITULO 10 - Depuración y uso de la consola (console.log, debugger)]
 
 [CONCLUSIÓN]
 
