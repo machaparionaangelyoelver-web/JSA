@@ -65,38 +65,13 @@
 
 # INTRODUCCIÓN
 
-La siguiente monografía profundiza el tema del lenguaje de diseño CSS,
-conocido como Cascading Style Sheets, la cual aplicar estilos a
-documentos, en su mayoría documentos HTML. Este lenguaje permite que la
-información de los documentos HTML tenga un aspecto que sea organizado,
-llamativo e interesante para los usuarios añadiendo el diseño de los
-bloques, los colores de las letras o fondos de los bloques, las formas
-que pueden tomar algunos bloques, entre otras funciones (Manz, s. f.).
-Por la funcionalidad que tiene este lenguaje, es muy importante para un
-desarrollador de páginas web el tener conocimientos sobre CSS al ser un
-tema fundamental para las páginas web.
+La siguiente monografía profundiza en el lenguaje de programación JavaScript, el cual permite dotar de interactividad y comportamiento dinámico a las páginas web, principalmente sobre documentos HTML y en conjunto con CSS. Gracias a JavaScript, la información presentada en un sitio puede responder a acciones del usuario, actualizar datos sin recargar la página, validar formularios, manipular elementos del DOM y comunicarse con servicios externos, entre otras funciones. Por su alcance y presencia en todos los navegadores modernos, JavaScript es un conocimiento fundamental para cualquier desarrollador web.
 
-Por lo tanto, se tiene como objetivo el conocer temas más avanzados
-relacionados con CSS. Para ello se buscará información de fuentes
-fiables para los temas seleccionados que se mostrarán en los capítulos
-para luego mostrar ejemplos aplicables de los temas utilizando códigos y
-sus resultados.
+Por lo tanto, se tiene como objetivo comprender los fundamentos de JavaScript y su ejecución en el navegador. Para ello se revisarán conceptos esenciales como variables y tipos de datos, operadores, estructuras condicionales, bucles, funciones, así como la manipulación del DOM, la gestión de eventos, el uso de JSON y los mecanismos de almacenamiento en el navegador (localStorage y sessionStorage). Cada capítulo incluirá explicaciones claras y ejemplos prácticos que permitan conectar la teoría con situaciones reales de desarrollo.
 
-Esta investigación resulta pertinente debido al aumento de la
-importancia de las páginas web en la actualidad, ya que para las
-organizaciones al intentar captar la atención de los usuarios buscan que
-su página web, aparte que tenga la información relevante sobre ellos,
-también buscan que sea llamativo, atractivo y tenga una buena
-optimización de rendimiento, por lo cual beneficia a las organizaciones
-utilizar CSS. También es importante para el aspecto académico, ya que,
-al ser importante para las organizaciones, es muy demandado por el
-mercado laboral, la cual servirá para los front-end, diseñadores
-gráficos y especialistas en experiencia de usuario.
+Esta investigación resulta pertinente debido al papel central que JavaScript ocupa en el ecosistema web actual. Las organizaciones requieren interfaces más ágiles, accesibles y receptivas a la interacción del usuario, y ello se logra dominando las bases del lenguaje y las APIs del navegador. En el ámbito académico y profesional, el dominio de JavaScript es altamente demandado en el mercado laboral, beneficiando a desarrolladores front-end, diseñadores de experiencia de usuario y perfiles afines que necesitan comprender cómo se construyen aplicaciones web modernas.
 
-El tipo de esta investigación será de Investigación documental y
-descriptiva, ya que se buscará información revisando documentos,
-artículos, cursos y recursos web especializados. también es exploratoria
-ya que busca profundizar en temas avanzas relacionados con CSS.
+El tipo de esta investigación será de carácter documental y descriptivo, ya que se recopilará y sistematizará información de fuentes técnicas confiables (documentación oficial y materiales de referencia reconocidos). A la vez, tendrá un componente exploratorio, puesto que se reforzará el aprendizaje mediante ejemplos de código y pequeños ejercicios que muestran la aplicación inmediata de los conceptos vistos en cada capítulo.
 
 # CAPITULO 1 - Introducción a JavaScript y su ejecución en navegadores
 
@@ -1107,13 +1082,14 @@ La consola del navegador es una herramienta esencial para la depuración. Con co
 ```
 # CONCLUSIÓN
 
-El estudio realizado permite establecer que la optimización de CSS constituye un componente fundamental en el proceso de mejora del rendimiento de los sitios web. Tal como sostiene Vázquez Sanisidro (2017), el uso inadecuado de las hojas de estilo puede generar un bloqueo en el renderizado de la página, retrasando la visualización de los contenidos y afectando de manera directa la experiencia del usuario. En este sentido, la investigación demuestra que la optimización de CSS no debe entenderse únicamente como una cuestión estética, sino como una práctica estratégica que influye en la eficiencia técnica y en la percepción global de calidad de un sitio web.
+El estudio realizado permite afirmar que JavaScript es un pilar imprescindible del desarrollo web moderno. A lo largo de la monografía se abordaron sus fundamentos (variables, tipos, operadores, condicionales y bucles), se revisó la declaración y uso de funciones y se demostró cómo, a través de la manipulación del DOM y el manejo de eventos, es posible transformar páginas estáticas en interfaces interactivas enfocadas en la experiencia del usuario. Además, se introdujo el uso de JSON para el intercambio de datos y los mecanismos de almacenamiento local del navegador, recursos clave para mantener información entre sesiones y construir prototipos funcionales sin necesidad de un servidor inmediato.
 
-Entre las técnicas analizadas, destacan la aplicación de CSS crítico, que permite mostrar de inmediato los elementos esenciales de la página; la carga diferida de estilos no prioritarios, que evita bloqueos en el renderizado inicial; y la minificación de archivos, que reduce el peso de los recursos y acelera su descarga. De igual forma, la exclusión de estilos inline favorece tanto la eficiencia del renderizado como la mantenibilidad del código, y la optimización de fuentes web mediante la propiedad font-display contribuye a garantizar que el contenido textual sea accesible desde el primer momento, incluso en conexiones limitadas.
+Entre los aprendizajes más relevantes destacan: (1) la importancia de utilizar comparaciones estrictas y buenas prácticas en control de flujo para evitar errores sutiles; (2) el valor de estructurar el código en funciones claras y reutilizables; (3) el uso del DOM y los eventos como puente entre la lógica y la interfaz; y (4) la utilidad de console.log y debugger como herramientas de depuración que facilitan identificar problemas y comprender el comportamiento del programa paso a paso.
 
-Los beneficios derivados de estas prácticas abarcan distintas dimensiones: desde la mejora en los tiempos de carga y la reducción de la tasa de abandono, hasta un mayor posicionamiento en motores de búsqueda y una mejor accesibilidad en entornos de baja capacidad. Además, al promover un código más estructurado y modular, la optimización facilita la escalabilidad y el mantenimiento de proyectos a largo plazo, consolidándose como un estándar de calidad en el desarrollo web moderno.
+Los beneficios de dominar estos conceptos se reflejan en la construcción de aplicaciones más mantenibles, accesibles y eficientes, con tiempos de respuesta adecuados y una interacción más fluida para el usuario. Asimismo, el estudio sienta una base sólida para continuar con contenidos de mayor complejidad, como módulos, promesas y async/await, APIs del navegador, frameworks y pruebas, consolidando un camino de aprendizaje progresivo.
 
-En conclusión, la optimización de CSS no representa una acción opcional, sino un requisito indispensable para el diseño de aplicaciones y sitios web eficientes, accesibles y competitivos. La incorporación de estas prácticas desde las etapas iniciales del desarrollo asegura no solo un mejor desempeño técnico, sino también una experiencia de usuario más satisfactoria, lo cual constituye un factor decisivo en el actual entorno digital caracterizado por la inmediatez y la alta exigencia de los usuarios.
+En conclusión, asimilar los fundamentos de JavaScript no es opcional sino indispensable para el desarrollo de aplicaciones web actuales. Integrar estas prácticas desde el inicio del proceso formativo permite escribir código más claro y robusto, mejorar la experiencia del usuario y responder a las exigencias técnicas del entorno digital contemporáneo.
+
 
 # REFERENCIA BIBLIOGRÁFICA
 
