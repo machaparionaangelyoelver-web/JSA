@@ -131,17 +131,15 @@ El motor de JavaScript realiza tres etapas principales:
 # CAPITULO 2 - Variables y tipos de datos en JavaScript
 
 Las variables son espacios de memoria destinados a almacenar datos que serán utilizados en la ejecución del programa. En JavaScript pueden declararse de tres maneras:
-var estudiante = true;   // Boolean
+antiguo,alcance global.
+se puede reasignar pero no volver a declararse en el mismo bloque.
 
 ```
-
-## Tipos de datos primitivos:
-
-## String (cadenas de texto):
+var estudiante = true;   // Boolean , se puede redeclararse
 
 ```javascript
 let saludo = "Hola Mundo";
-
+const z = 30; // no puede cambiarse 
 ```
 
 ## Number (números enteros y decimales):
